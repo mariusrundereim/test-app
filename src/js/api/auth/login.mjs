@@ -1,4 +1,4 @@
-import { baseUrl } from "./baseurl.mjs";
+import { baseUrl } from "../baseurl.mjs";
 
 export async function login({ email, pw }) {
   const response = await fetch(`${baseUrl}/auth/login`, {
