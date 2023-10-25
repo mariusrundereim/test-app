@@ -1,0 +1,13 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node ./src/js/tests/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
