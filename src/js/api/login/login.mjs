@@ -1,19 +1,16 @@
 import { baseUrl } from "./baseurl.mjs";
 
-export async function login(username, password) {
-  const options = {
+export async function login({ email, pw }) {
+  const response = await fetch(`${baseUrl}/auth/login`, {
     method: "POST",
     body: JSON.stringify({
-      username: username,
-      password: password,
+      email: email,
+      password: pw,
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-  };
-  const response = await fetch(`${baseUrl}`, options);
+  });
   const result = await response.json();
-  console.log(result);
   return result;
 }
-login();
